@@ -1,0 +1,229 @@
+.case-table-container {
+  background-color: #242424;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #333;
+}
+
+.case-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.case-table th {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #333;
+  position: relative;
+}
+
+.case-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.case-table th.sortable:hover {
+  background-color: #2a2a2a;
+}
+
+.sort-indicator {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  color: #646cff;
+}
+
+.case-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.case-row {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.case-row:hover {
+  background-color: #2a2a2a;
+}
+
+.case-row:last-child td {
+  border-bottom: none;
+}
+
+.entry-id {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  color: #888;
+}
+
+.case-link {
+  color: #646cff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.case-link:hover {
+  text-decoration: underline;
+}
+
+.case-title {
+  font-weight: 500;
+  color: #fff;
+}
+
+.status-badge,
+.priority-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-open {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.status-progress {
+  background-color: rgba(251, 191, 36, 0.2);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.status-closed {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.status-hold {
+  background-color: rgba(156, 163, 175, 0.2);
+  color: #9ca3af;
+  border: 1px solid rgba(156, 163, 175, 0.3);
+}
+
+.priority-low {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.priority-medium {
+  background-color: rgba(251, 191, 36, 0.2);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.priority-high {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.priority-critical {
+  background-color: rgba(220, 38, 38, 0.2);
+  color: #dc2626;
+  border: 1px solid rgba(220, 38, 38, 0.3);
+}
+
+.officer-name {
+  font-weight: 500;
+}
+
+.date-opened {
+  color: #888;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  padding: 0.25rem 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.view-btn {
+  background-color: #646cff;
+  color: white;
+}
+
+.view-btn:hover {
+  background-color: #5a5fcf;
+}
+
+.edit-btn {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #d97706;
+}
+
+.archive-btn {
+  background-color: #6b7280;
+  color: white;
+}
+
+.archive-btn:hover {
+  background-color: #4b5563;
+}
+
+.no-cases {
+  padding: 3rem;
+  text-align: center;
+  color: #666;
+}
+
+.no-cases p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .case-table {
+    font-size: 0.8rem;
+  }
+  
+  .case-table th,
+  .case-table td {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .actions {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .action-btn {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-table-container {
+    overflow-x: auto;
+  }
+  
+  .case-table {
+    min-width: 800px;
+  }
+}
